@@ -7,5 +7,6 @@
         "titleBar.inactiveForeground": "#ffffffcc",
         "titleBar.activeBackground": "#663399",
         "titleBar.inactiveBackground": "#663399cc",
-    }
+    },
+    "editor.tabSize": 2
 }
