@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
-export default function Nav() {
+import page from '../constants/page'
+
+import styles from './nav.module.css'
+
+export default function Nav(props) {
   return (
-      <nav>
-          <Link to="/portfolio/">portfolio</Link>
-          <Link to="/blog/">blog</Link>
-          <Link to="/contact/">contact</Link>
-      </nav>
+    <nav
+      className={
+        props.active ? `${styles.nav} ${styles.show}` : `${styles.nav}`
+      }
+    >
+      {page.map((item, index) => (
+        <Link key={index} to={item.path}>{item.content}</Link>
+      ))}
+    </nav>
   )
 }
