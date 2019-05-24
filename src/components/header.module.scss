@@ -1,0 +1,36 @@
+@import "../styles/_bits";
+
+.header {
+    background-color: var(--color-grey-mine-shaft);
+    color: var(--color-white);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 .5rem;
+
+    .name {
+        color: var(--color-white);
+        font-family: var(--ff-body);
+        font-size: 2rem;
+        font-weight: 100;
+        margin: 0 .5rem;
+        margin-right: auto;
+    }
+    .header-button {
+        display: none;
+    }
+    .header-icon {
+        fill: var(--color-white);
+        width: 2rem;
+        height: 2rem;
+    }
+
+    @include breakpoint(nav-break) {
+        .header-button {
+            display: block;
+        }
+    }
+}

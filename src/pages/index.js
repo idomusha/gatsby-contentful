@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 
-import '../styles/main.scss'
+import '../styles/global.scss'
 
 export default () => (
   <>

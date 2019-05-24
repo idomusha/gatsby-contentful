@@ -1,0 +1,34 @@
+@mixin breakpoint($point) {
+
+  @if $point == small {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
+  @if $point == nav-break {
+    @media (max-width: 770px) {
+      @content;
+    }
+  }
+  @if $point == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $point == flip-small {
+    @media (min-width: 420px) {
+      @content;
+    }
+  }
+  @if $point == flip-nav-break {
+    @media (min-width: 770px) {
+      @content;
+    }
+  }
+  @if $point == flip-large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+}

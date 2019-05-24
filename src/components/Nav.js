@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import page from '../constants/page'
 
-import styles from './nav.module.css'
+import styles from './nav.module.scss'
 
 export default function Nav(props) {
   return (

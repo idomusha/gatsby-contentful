@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import social from '../constants/social'
 
-import styles from './nav.module.css'
+import styles from './social.module.scss'
 
 export default function Social() {
   return (

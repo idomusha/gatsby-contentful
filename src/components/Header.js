@@ -4,7 +4,7 @@ import Nav from '../components/Nav'
 import Social from '../components/Social'
 
 import { FaBars } from 'react-icons/fa'
-import styles from './header.module.css'
+import styles from './header.module.scss'
 
 export default function Header() {
   const [isOpen, setNavState] = useState(false)
@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <button type="button" className={styles.headerButton} onClick={toggleNav}>
+      <button type="button" className={`button ${styles.headerButton}`} onClick={toggleNav}>
         <FaBars className={styles.headerIcon} />
       </button>
       <h1 className={styles.name}>idomusha</h1>

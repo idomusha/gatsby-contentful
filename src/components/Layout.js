@@ -6,9 +6,11 @@ import Footer from '../components/Footer'
 export default function Layout({ children }) {
   return (
     <>
-        <Header/>
-            {children}
-        <Footer/>
+      <Header />
+      <main className="container">
+        {children}
+      </main>
+      <Footer />
     </>
   )
 }
