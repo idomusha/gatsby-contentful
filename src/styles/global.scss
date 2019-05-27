@@ -11,7 +11,6 @@
   --color-grey-gallery: #ececec;
   --color-grey-alto: #cfcfcf;
   --transition: all 0.3s linear;
-  --spacing: 4px;
   --shadow-light: 2px 5px 3px 0px rgba(0, 0, 0, .5);
   --shadow-dark: 4px 10px 5px 0px rgba(0, 0, 0, .5);
   --ff-body: 'Raleway', sans-serif;
@@ -21,6 +20,7 @@
   --fz-h3: 2.75rem;
   --fz-h4: 1.75rem;
   --fz-p: 1.125rem;
+  --fz-button: 1rem;
   --fz-small: 0.75rem;
 }
 
@@ -56,7 +56,7 @@ h6 {
 p {
   margin-bottom: 1.25rem;
 }
-.container {
+.hero {
   min-height: calc(100vh - 62px);
   background: linear-gradient(#3fd0d4b3, rgba(0, 0, 0, 0.7)),
     url("../images/defaultBcg.jpeg") center/cover no-repeat;
@@ -68,20 +68,26 @@ p {
 .button {
   display: inline-block;
   position: relative;
-  padding: 0 20px;
+  padding: 1.125rem 1.5rem;
   border: 1px solid transparent;
   vertical-align: middle;
   background-image: none;
   user-select: none;
-  font-size: var(--fz-p);
+  font-size: var(--fz-button);
   font-style: normal;
   font-weight: 700;
   line-height: 1em;
   font-family: var(--ff-body);
   text-transform: uppercase;
   text-align: center;
+  text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   color: var(--color-grey-mine-shaft);
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+  &.out-white {
+     color: var(--color-white);
+     border-color: var(--color-white);
+  }
 }

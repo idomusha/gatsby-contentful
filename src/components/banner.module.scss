@@ -1,0 +1,31 @@
+@import "../styles/_bits";
+
+.banner {
+  text-align: center;
+  color: var(--color-white);
+  letter-spacing: 6px;
+
+  h1 {
+    font-size: 3.3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    font-family: var(--ff-body);
+  }
+  p {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@include breakpoint(nav-break) {
+  .banner {
+    h1 {
+      font-size: 4.5rem;
+    }
+    p {
+      width: 70%;
+    }
+  }
+}
