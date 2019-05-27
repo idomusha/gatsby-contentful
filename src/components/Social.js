@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import social from '../constants/social'
 
@@ -9,7 +8,13 @@ export default function Social() {
   return (
     <nav className={styles.social}>
       {social.map((item, index) => (
-        <a key={index} href={item.url} title={item.name} target="_blank">
+        <a
+          key={index}
+          href={item.url}
+          title={item.name}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {item.icon}
         </a>
       ))}

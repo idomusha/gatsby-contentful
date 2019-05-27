@@ -1,0 +1,24 @@
+@import "../styles/_bits";
+
+.footer {
+    background-color: var(--color-grey-mine-shaft);
+    color: var(--color-white);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem .5rem;
+
+    .nav {
+        a{
+            text-transform: uppercase;
+        }
+    }
+    .copyright {
+        margin: .5rem 0;
+    }
+    @include breakpoint(nav-break) {
+
+    }
+}

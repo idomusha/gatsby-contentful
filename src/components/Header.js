@@ -14,11 +14,15 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <button type="button" className={`button ${styles.headerButton}`} onClick={toggleNav}>
+      <button
+        type="button"
+        className={`button ${styles.headerButton}`}
+        onClick={toggleNav}
+      >
         <FaBars className={styles.headerIcon} />
       </button>
       <h1 className={styles.name}>idomusha</h1>
-      <Nav active={isOpen} />
+      <Nav className={`${styles.nav} ${isOpen ? styles.show : null}`} />
       <Social />
     </header>
   )
