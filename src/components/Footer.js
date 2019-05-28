@@ -10,7 +10,6 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Nav className={styles.nav} />
       <Social />
-      <div className={styles.copyright}>copyright &copy; nkyo {new Date().getFullYear()}</div>
     </footer>
   )
 }
