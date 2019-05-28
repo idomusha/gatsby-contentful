@@ -1,0 +1,59 @@
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 1.125rem 1.5rem;
+  &.inline {
+    padding: 0;
+  }
+  &.transparent {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  border: 1px solid transparent;
+  vertical-align: middle;
+  background-image: none;
+
+  font-size: var(--fz-button);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1em;
+  font-family: var(--ff-body);
+  text-transform: uppercase;
+  color: var(--color-grey-mine-shaft);
+
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+  /* Webkit / Chrome Specific CSS to remove tap highlight color */
+  -webkit-tap-highlight-color: transparent;
+
+  /* Firefox Specific CSS to remove button differences and focus ring */
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:focus {
+    // outline: 0;
+  }
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  @at-root {
+    a#{&} {
+      color: var(--color-grey-mine-shaft);
+      text-decoration: none;
+    }
+    button#{&}, input[type=submit] {
+      cursor: pointer;
+    }
+  }
+
+  &.out-white {
+    color: var(--color-white);
+    border-color: var(--color-white);
+ }
+}
