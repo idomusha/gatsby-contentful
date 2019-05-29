@@ -1,6 +1,8 @@
 @import "../styles/_bits";
 
 .header {
+    z-index: 1;
+    position: static;
     background-color: var(--color-grey-mine-shaft);
     color: var(--color-white);
     display: flex;
@@ -8,21 +10,23 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: var(--height-header);
     padding: 0 .5rem;
 
+    .button-home {
+        margin-right: auto;
+    }
     .name {
         color: var(--color-white);
         font-family: var(--ff-body);
         font-size: 2rem;
         font-weight: 100;
         margin: 0 .5rem;
-        margin-right: auto;
     }
-    .header-button {
+    .button-nav {
         display: none;
     }
-    .header-icon {
+    .icon-nav {
         fill: var(--color-white);
         width: 2rem;
         height: 2rem;
@@ -31,16 +35,18 @@
     @include breakpoint(nav-break) {
         .header-button {
             display: block;
+            padding: 1rem;
         }
         .nav {
             display: none;
-            position: absolute;
-            top: 4rem;
+            z-index: 1;
+            position: fixed;
+            top: var(--height-header);
             right: 0;
             bottom: 0;
             left:0;
             margin: 0;
-            background-color: var(--alpha-grey-mine-shaft);
+            background-color: var(--color-grey-mine-shaft-alpha-80);
             font-family: var(--ff-heading);
             font-size: var(--fz-h3);
         }

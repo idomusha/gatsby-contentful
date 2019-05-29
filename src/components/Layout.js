@@ -3,14 +3,17 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-export default function Layout({ children }) {
+import styles from './layout.module.scss'
+
+export default function Layout(props) {
+  var classes = [styles.layout, props.className].join(' ')
   return (
-    <>
+    <div className="page">
       <Header />
-      <main>
-        {children}
+      <main className={classes}>
+        {props.children}
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
