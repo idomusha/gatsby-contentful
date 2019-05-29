@@ -11,6 +11,7 @@
   }
   border: 1px solid transparent;
   vertical-align: middle;
+  background-color: transparent;
   background-image: none;
 
   font-size: var(--fz-button);
@@ -19,9 +20,14 @@
   line-height: 1em;
   font-family: var(--ff-body);
   text-transform: uppercase;
+
+  &.lowercase {
+    text-transform: inherit;
+  }
+
   color: var(--color-grey-mine-shaft);
 
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 
   /* Webkit / Chrome Specific CSS to remove tap highlight color */
   -webkit-tap-highlight-color: transparent;
@@ -43,7 +49,8 @@
   }
 
   @at-root {
-    a#{&} {
+    a#{&},
+    a#{&}:active {
       color: var(--color-grey-mine-shaft);
       text-decoration: none;
     }
@@ -52,8 +59,32 @@
     }
   }
 
+  &.in-white {
+    color: var(--color-grey-mine-shaft);
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-white-alpha-20);
+    }
+ }
   &.out-white {
     color: var(--color-white);
     border-color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-white-alpha-20);
+    }
  }
+ &.in-primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--color-white);
+    }
+  }
 }

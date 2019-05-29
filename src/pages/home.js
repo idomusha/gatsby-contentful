@@ -14,7 +14,7 @@ export default () => (
     <Hero>
       <Banner
         title="continue exploring"
-        info="Friend at bliss will loved feere thou. A as he was him heart nine childe them. To below feel the given as with heavenly, ah deadly go could harold misery. A were strength visit pride start. Gild peace low deadly to wight, den by knew his vexed he his bower."
+        info="Lorem ipsum"
       >
         <Link to="/portfolio" className="button out-white">
           explore portfolio
