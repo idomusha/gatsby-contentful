@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../containers/Layout';
-import Hero from '../components/Hero';
+import Hero from '../components/Common/Hero';
 import Form from '../components/Contact/Form';
 
 export default function contact({ data, location: { pathname }}) {

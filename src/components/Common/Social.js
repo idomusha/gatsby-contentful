@@ -1,6 +1,6 @@
 import React from 'react'
 
-import socials from '../constants/socials'
+import socials from '../../constants/socials'
 
 import styles from './social.module.scss'
 

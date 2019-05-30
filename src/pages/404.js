@@ -2,7 +2,7 @@ import React from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import Layout from '../containers/Layout'
-import Banner from '../components/Banner'
+import Banner from '../components/Common/Banner'
 
 import styles from './404.module.scss'
 

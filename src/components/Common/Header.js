@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Link, useStaticQuery, StaticQuery, graphql } from 'gatsby'
+import { Link, useStaticQuery/* , StaticQuery */, graphql } from 'gatsby'
 
-import Nav from '../components/Nav'
-import Social from '../components/Social'
+import Nav from './Nav'
+import Social from './Social'
 
-import pages from '../constants/pages'
+import pages from '../../constants/pages'
 
 import { FaBars } from 'react-icons/fa'
 import styles from './header.module.scss'
@@ -45,9 +45,9 @@ export default function Header() {
         (
           <Link className={`button transparent lowercase ${styles.buttonHome}`} key={index} to={item.path}>
           <h1 className={styles.name}>{siteMetadata.title}</h1>
-          <StaticQuery query={getSiteData} render={({site: {siteMetadata}}) => (
+          {/* <StaticQuery query={getSiteData} render={({site: {siteMetadata}}) => (
             <h1 className={`color-primary ${styles.name}`}>{siteMetadata.title}</h1>
-          )} />
+          )} /> */}
           </Link>
         )
       )}

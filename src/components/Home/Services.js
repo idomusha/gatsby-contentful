@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Title from '../Title'
+import Title from '../Common/Title'
 
 import services from '../../constants/services'
 

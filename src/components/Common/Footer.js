@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Nav from '../components/Nav'
-import Social from '../components/Social'
+import Nav from './Nav'
+import Social from './Social'
 
 import styles from './footer.module.scss'
 

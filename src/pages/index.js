@@ -2,8 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../containers/Layout'
-import Hero from '../components/Hero'
-import Banner from '../components/Banner'
+import Hero from '../components/Common/Hero'
+import Banner from '../components/Common/Banner'
 import About from '../components/Home/About'
 import Services from '../components/Home/Services'
 

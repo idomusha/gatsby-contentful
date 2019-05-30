@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../containers/Layout';
-import Hero from '../components/Hero';
+import Hero from '../components/Common/Hero';
 
 export default class portfolio extends Component {
   render() {
