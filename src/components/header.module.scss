@@ -13,29 +13,61 @@
     height: var(--height-header);
     padding: 0 .5rem;
 
-    .button-home {
-        margin-right: auto;
-    }
-    .name {
-        color: var(--color-white);
-        font-family: var(--ff-body);
-        font-size: 2rem;
-        font-weight: 100;
-        margin: 0 .5rem;
-    }
     .button-nav {
         display: none;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        padding: 0;
     }
     .icon-nav {
         fill: var(--color-white);
         width: 2rem;
         height: 2rem;
     }
+    .button-home {
+        margin-right: auto;
+        height: var(--height-header);
+    }
+    .name {
+        z-index: 1;
+        position: relative;
+        color: var(--color-white);
+        font-family: var(--ff-body);
+        font-size: 2rem;
+        font-weight: 100;
+        margin: 0 0 0 1rem;
+
+        + .name {
+            z-index: 0;
+            position: relative;
+            color: var(--color-primary);
+            top:  -.7rem;
+            opacity: .8;
+            text-shadow: 0 .3rem 0 rgba(26, 86, 88, .8);
+        }
+    }
+    .nav {
+        a:hover {
+            color: var(--color-primary)
+        }
+    }
 
     @include breakpoint(nav-break) {
-        .header-button {
-            display: block;
-            padding: 1rem;
+        padding-left: 0;
+
+        .button-nav {
+            display: flex;
+        }
+        .name {
+            font-size: 1.5rem;
+            margin-left: 0;
+            top:  .3rem;
+
+            + .name {
+                top:  -.4rem;
+            }
         }
         .nav {
             display: none;

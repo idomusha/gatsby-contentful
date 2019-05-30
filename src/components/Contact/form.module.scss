@@ -1,0 +1,38 @@
+.contact {
+  padding: 4rem 0;
+label {
+  display: inline-block;
+  font-weight: 700;
+  margin-left: .75rem;
+  margin-bottom: .25rem;
+}
+  input, textarea {
+    border: 1px solid var(--color-grey-alto);
+    border-radius: 0.25rem;
+    min-height: 3rem;
+  }
+}
+.center {
+  width: 80vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .center {
+    width: 50vw;
+    margin: 0 auto;
+  }
+}
+
+.formControl,
+.submit {
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--darkGrey);
+  border-radius: 0.25rem;
+}
+.submit {
+  cursor: pointer;
+  border-width: 3px;
+}

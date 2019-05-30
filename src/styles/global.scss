@@ -5,14 +5,15 @@
 :root {
   // http://chir.ag/projects/name-that-color
   --color-primary: #3fd0d4;
-  --color-white: #fff;
   --color-primary-alpha-20: rgba(63, 208, 212, .2);
+  --color-white: #fff;
   --color-white-alpha-20: rgba(255, 255, 255, .2);
   --color-white-alabaster: #f7f7f7;
   --color-grey-mine-shaft: #3d3d3d;
   --color-grey-mine-shaft-alpha-80: rgba(61, 61, 61, .8);
   --color-grey-gallery: #ececec;
   --color-grey-alto: #cfcfcf;
+  --color-black: #000;
   --ff-body: 'Raleway', sans-serif;
   --ff-heading: 'Merriweather', serif;
   --fz-h1: 5rem;
@@ -27,7 +28,7 @@
   --ls: 1rem;
   --shadow-light: 2px 5px 3px 0px rgba(0, 0, 0, .5);
   --shadow-dark: 4px 10px 5px 0px rgba(0, 0, 0, .5);
-  --transition: .3s ease-out;
+  --trs: .3s ease-out;
 }
 
 * {
@@ -62,6 +63,9 @@ h6 {
 p {
   margin-bottom: 1.25rem;
 }
+.color-primary {
+  color: var(--color-primary);
+}
 .page {
   display: flex;
   flex-direction: column;
@@ -76,16 +80,8 @@ p {
     }
   }
 }
-.hero {
-  min-height: calc(100vh - 62px);
-  background: linear-gradient(#3fd0d4b3, rgba(0, 0, 0, 0.7)),
-    url("../images/default.jpg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .full-screen {
-  min-height: calc(100vh - 4rem - 9rem);
+  min-height: calc(100vh - var(--height-header) - var(--height-footer));
   display: flex;
   justify-content: center;
   align-items: stretch;

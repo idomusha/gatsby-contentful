@@ -1,19 +1,19 @@
 import React from 'react'
-import { FaWallet, FaTree, FaSocks} from 'react-icons/fa'
+import { FaDrawPolygon, FaCode, FaBuromobelexperte} from 'react-icons/fa'
 
 export default [
   {
-    icon: <FaWallet />,
+    icon: <FaDrawPolygon />,
     title: 'design',
     content: 'To not and and pleasure a lone heralds and charms.'
   },
   {
-    icon: <FaTree />,
+    icon: <FaCode />,
     title: 'front-end',
     content: 'To not and and pleasure a lone heralds and charms.'
   },
   {
-    icon: <FaSocks />,
+    icon: <FaBuromobelexperte />,
     title: 'ux',
     content: 'To not and and pleasure a lone heralds and charms.'
   },

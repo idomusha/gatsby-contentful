@@ -9,9 +9,6 @@
     padding: .5rem .5rem;
     color: var(--color-white);
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    transition: color var(--trs);
   }
 }

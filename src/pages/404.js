@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-import Layout from '../components/Layout'
+import Layout from '../containers/Layout'
 import Banner from '../components/Banner'
 
 import styles from './404.module.scss'
@@ -11,7 +11,7 @@ export default function notFound() {
     <Layout className="full-screen">
       <header className={styles.error}>
         <Banner title="oops it's a dead end">
-          <Link to="/" className="button out-white">Back to home page</Link>
+          <AniLink to="/" className="button out-white">Back to home page</AniLink>
         </Banner>
       </header>
     </Layout>

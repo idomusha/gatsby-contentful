@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, StaticQuery, graphql } from 'gatsby'
 
 import Nav from '../components/Nav'
 import Social from '../components/Social'
@@ -15,6 +15,22 @@ export default function Header() {
     setNavState(isOpen => !isOpen)
   }
 
+  const getSiteData = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+  `
+
+  const {
+    site: {
+      siteMetadata
+    }
+  } = useStaticQuery(getSiteData)
+
   return (
     <header className={styles.header}>
       <button
@@ -28,7 +44,10 @@ export default function Header() {
       (item.content === 'home') &&
         (
           <Link className={`button transparent lowercase ${styles.buttonHome}`} key={index} to={item.path}>
-          <h1 className={styles.name}>idomusha</h1>
+          <h1 className={styles.name}>{siteMetadata.title}</h1>
+          <StaticQuery query={getSiteData} render={({site: {siteMetadata}}) => (
+            <h1 className={`color-primary ${styles.name}`}>{siteMetadata.title}</h1>
+          )} />
           </Link>
         )
       )}

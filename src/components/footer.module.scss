@@ -12,8 +12,11 @@
     height: var(--height-footer);
 
     .nav {
-        a{
+        a {
             text-transform: uppercase;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-/* const Title = ({ normal, highlight, classname }) => (
-  <div className={classname}>
+/* const Title = ({ normal, highlight, className }) => (
+  <div className={className}>
     <h3>
       <span>{normal} <span className="highlight">{highlight}</span></span>
     </h3>
@@ -30,9 +30,9 @@ export default styled(Title)`
   }
 ` */
 
-export default function Title ({ normal, highlight, classname }) {
+export default function Title ({ normal, highlight, className }) {
   return (
-    <StyledTitle className={classname}>
+    <StyledTitle className={className}>
       <h3>
         <span>{normal} <span className="highlight">{highlight}</span></span>
       </h3>

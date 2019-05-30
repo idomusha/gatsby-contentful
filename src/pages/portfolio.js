@@ -1,13 +1,30 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
+import Layout from '../containers/Layout';
+import Hero from '../components/Hero';
 
 export default class portfolio extends Component {
-    render() {
-        return (
-            <Layout>
-                portfolio
-            </Layout>
-        )
-    }
+  render() {
+    return (
+      <Layout>
+        <Hero
+          page={this.props.pathname}
+          image={this.props.data.portfolioBackgroundImage.childImageSharp.fluid}
+        />
+      </Layout>
+    );
+  }
 }
+
+export const query = graphql`
+  {
+    portfolioBackgroundImage: file(relativePath: { eq: "default.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4160, quality: 90) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`;
