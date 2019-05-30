@@ -6,6 +6,7 @@ import Hero from '../components/Common/Hero'
 import Banner from '../components/Common/Banner'
 import About from '../components/Home/About'
 import Services from '../components/Home/Services'
+import Featured from '../components/Home/Featured'
 
 import '../styles/global.scss'
 
@@ -23,8 +24,9 @@ export default ({ data, location: { pathname }}) => {
           </Link>
         </Banner>
       </Hero>
-      <About></About>
-      <Services></Services>
+      <About />
+      <Services />
+      <Featured />
     </Layout>
   )
 }

@@ -44,10 +44,10 @@ html { font-size: 16px; }
   }
 }
 body {
-  font-family: var(--ff-body);
   color: var(--color-mine-shaft);
   background: var(--color-white);
-  line-height: 1.4;
+  font-family: var(--ff-body);
+  line-height: 1.4em;
   font-size: var(--fz-p);
 }
 h1,
@@ -57,8 +57,9 @@ h4,
 h5,
 h6 {
   margin-bottom: 1.25rem;
-  letter-spacing: var(--ls);
   margin-right: calc(-1 * var(--ls));
+  line-height: 1em;
+  letter-spacing: var(--ls);
 }
 p {
   margin-bottom: 1.25rem;

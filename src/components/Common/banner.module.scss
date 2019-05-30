@@ -6,7 +6,7 @@
   letter-spacing: 6px;
 
   h1 {
-    font-size: 3.3rem;
+    font-size: 3rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
     padding: 0 1rem;
@@ -21,9 +21,6 @@
 
 @include breakpoint(nav-break) {
   .banner {
-    h1 {
-      font-size: 4.5rem;
-    }
     p {
       width: 70%;
     }
