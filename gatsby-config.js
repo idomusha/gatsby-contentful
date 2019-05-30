@@ -19,6 +19,7 @@ module.exports = {
     email: `idomusha@soot.black`
   },
   plugins: [
+    `gatsby-plugin-playground`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,6 +40,6 @@ module.exports = {
 
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
   ],
 }
