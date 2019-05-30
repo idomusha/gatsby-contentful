@@ -9,5 +9,5 @@
         "titleBar.inactiveBackground": "#663399cc",
     },
     "editor.tabSize": 2,
-    "eslint.enable": false
+    "eslint.enable": true
 }
