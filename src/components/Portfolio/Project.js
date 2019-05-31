@@ -1,20 +1,41 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import AniLink from 'gatsby-plugin-transition-link/AniLink/'
+import PropTypes from 'prop-types'
 
 import { FaMap } from 'react-icons/fa'
 import styles from './project.module.scss'
+import Projects from './Projects';
 
-export default function project({ project }) {
+export default function Project({ project }) {
+
+  // simulate null data for the third item
+  if (project.contentful_id === '52uhi0XwYz7mhq3kPPpVHG') {
+    project.images = null
+    project.slug = null
+    project.days = null
+  }
 
   const { name, price, country, days, slug, images } = project
-  let projectImage = images[0].fluid
+  const { file: { childImageSharp: { fluid: fallbackImage }} } = useStaticQuery(graphql`
+  {
+    file(relativePath: { eq: "default.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  `)
+  const projectImage = images ? images[0].fluid : fallbackImage
 
-  return (
-    <article className={styles.project}>
+  const inner = (
+    <>
       <div className={styles.imgContainer}>
         <Image fluid={projectImage} alt="" />
-        <AniLink fade to={`project/${slug}`} className={styles.link}>Details</AniLink>
+        {slug !== null && <span type="button" to={`project/${slug}`} className={styles.button}>Details</span>}
       </div>
       <footer className={styles.footer}>
         <h3>{name}</h3>
@@ -24,10 +45,28 @@ export default function project({ project }) {
             {country}
           </h4>
           <div className={styles.details}>
-            <h6>{days} days</h6>
+            {days !== null && <h6>{days} days</h6>}
           </div>
         </div>
       </footer>
+    </>
+  )
+
+  return (
+    <article className={styles.project}>
+      {slug !== null
+        ? <AniLink fade to={`project/${slug}`} className={styles.link}>{inner}</AniLink>
+        : <>{inner}</>
+      }
     </article>
   )
+}
+
+Project.propTypes = {
+  project:PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    days: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  })
 }

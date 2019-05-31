@@ -5,7 +5,19 @@
 .project:hover {
   box-shadow: var(--shadow-dark);
 }
-
+.link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    picture img {
+      opacity: .2 !important;
+    }
+    .button {
+      opacity: 1;
+    }
+  }
+}
 .img-container {
   position: relative;
   background: var(--color-primary);
@@ -14,32 +26,31 @@
 .img {
   transition: var(--trs);
 }
-.img-container:hover .img {
-  opacity: 0.3;
-}
 
-.link {
+
+.button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
   text-transform: uppercase;
-  letter-spacing: var(--ls);
+  text-decoration: none;
+  background-color: var(--color-white-alpha-20);
   color: var(--color-white);
   border: 2px solid var(--color-white);
   padding: 0.9rem 1.6rem;
   display: inline-block;
+  font-weight: 700;
   transition: var(--trs);
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
 }
-.link:hover {
-  background: var(--color-white);
-  color: var(--color-primary);
-}
-.img-container:hover .link {
-  opacity: 1;
-}
+
 
 .footer {
   padding: 1rem;

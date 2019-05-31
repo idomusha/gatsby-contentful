@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../containers/Layout';
 import Hero from '../components/Common/Hero';
+import Projects from '../components/Portfolio/Projects'
 
 export default class portfolio extends Component {
   render() {
@@ -12,6 +13,7 @@ export default class portfolio extends Component {
           page={this.props.pathname}
           image={this.props.data.portfolioBackgroundImage.childImageSharp.fluid}
         />
+        <Projects />
       </Layout>
     );
   }
