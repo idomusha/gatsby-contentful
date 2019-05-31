@@ -1,27 +1,27 @@
-.day {
+.task {
   margin: 2rem 0;
 }
-.day h4 {
+.task h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.btn {
+.button {
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
 }
-.btn svg {
+.button svg {
   font-size: 1.5rem;
   color: var(--color-primary);
 }
-.day p {
+.task p {
   line-height: 2;
   transition: var(--trs);
 }
 @media screen and (min-width: 992px) {
-  .day h4 {
+  .task h4 {
     width: 400px;
   }
 }

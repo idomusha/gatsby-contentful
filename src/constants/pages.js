@@ -7,10 +7,10 @@ export default [
     path: '/portfolio',
     content: 'portfolio',
   },
-  {
+  /* {
     path: '/blog',
     content: 'blog',
-  },
+  }, */
   {
     path: '/contact',
     content: 'contact',

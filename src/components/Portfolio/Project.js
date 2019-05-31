@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
-import AniLink from 'gatsby-plugin-transition-link/AniLink/'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import PropTypes from 'prop-types'
 
 import { FaMap } from 'react-icons/fa'
