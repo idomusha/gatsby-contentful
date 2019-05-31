@@ -23,7 +23,7 @@ export default function Featured() {
             days
             images {
               fluid {
-                ...GatsbyContentfulFluid_tracedSVG
+                ...GatsbyContentfulFluid
               }
             }
           }

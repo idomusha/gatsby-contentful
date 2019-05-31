@@ -19,7 +19,7 @@ export default function Projects() {
           days
           images {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
