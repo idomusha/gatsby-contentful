@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Highlighter from 'react-highlight-words';
 
 /* const Title = ({ normal, highlight, className }) => (
   <div className={className}>
@@ -30,14 +31,19 @@ export default styled(Title)`
   }
 ` */
 
-export default function Title ({ normal, highlight, className }) {
+export default function Title({ content, highlight, className }) {
   return (
     <StyledTitle className={className}>
       <h3>
-        <span>{normal} <span className="highlight">{highlight}</span></span>
+        <Highlighter
+          highlightClassName="highlight"
+          searchWords={ highlight }
+          autoEscape={true}
+          textToHighlight={ content }
+        />
       </h3>
     </StyledTitle>
-  )
+  );
 }
 
 const StyledTitle = styled.div`
@@ -51,6 +57,7 @@ const StyledTitle = styled.div`
 
   .highlight {
     color: var(--color-primary);
+    background-color: transparent;
   }
 
   @media (max-width: 768px) {
@@ -58,4 +65,4 @@ const StyledTitle = styled.div`
       display: block;
     }
   }
-`
+`;

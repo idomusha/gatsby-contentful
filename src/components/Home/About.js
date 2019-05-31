@@ -22,7 +22,7 @@ export default function About() {
 
   return (
     <section className={styles.about}>
-      <Title normal="about" highlight="me"></Title>
+      <Title content="about me" highlight={['about']} />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>

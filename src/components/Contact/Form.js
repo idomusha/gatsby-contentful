@@ -6,7 +6,7 @@ import styles from './form.module.scss';
 export default function Form() {
   return (
     <section className={styles.contact}>
-      <Title normal="contact" highlight="me" />
+      <Title content="contact me" highlight={['contact']} />
       <div className={styles.center}>
         <form className={styles.form} action="https://formspree.io/idomusha@soot.black" method="POST">
         <div>
@@ -31,7 +31,7 @@ export default function Form() {
           </div>
           <div>
           <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="10" className={styles.formControl} placeholder="Hello there!"></textarea>
+            <textarea name="message" id="message" rows="10" className={styles.formControl} placeholder="Hi there!"></textarea>
           </div>
           <div>
             <input type="submit" value="send" className={`button in-primary ${styles.submit}`}></input>

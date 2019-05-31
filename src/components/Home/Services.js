@@ -9,7 +9,7 @@ import styles from './services.module.scss'
 export default function Services() {
   return (
     <section className={styles.services}>
-      <Title highlight="my" normal="skills"></Title>
+      <Title content="my skills" highlight={['skills']} />
       <div className={styles.center}>
         {
           services.map((item, index) => (

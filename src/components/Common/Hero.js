@@ -2,14 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-const Hero = ({ image, className, page, children }) => {
-  console.log(page === '/')
-  return (
-    <BackgroundImage Tag="header" className={className} fluid={image} page={page}>
-      {children}
-    </BackgroundImage>
-  )
-}
+const Hero = ({ image, className, page, children }) => (
+  <BackgroundImage Tag="header" className={className} fluid={image} page={page}>
+    {children}
+  </BackgroundImage>
+)
 
 export default styled(Hero)`
   display: flex;

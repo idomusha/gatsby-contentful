@@ -35,7 +35,7 @@ export default function Featured() {
 
   return (
     <section className={styles.list}>
-      <Title normal="featured" highlight="projects" />
+      <Title content="featured projects" highlight={['featured']} />
       <div className={styles.center}>
       {projects.map(({ node }) => (
         <Project key={node.contentful_id} project={node} />

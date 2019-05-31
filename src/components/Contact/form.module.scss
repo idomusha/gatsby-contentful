@@ -7,9 +7,14 @@ label {
   margin-bottom: .25rem;
 }
   input, textarea {
+    font-family: var(--ff-body);
+    font-size: 1rem;
     border: 1px solid var(--color-grey-alto);
     border-radius: 0.25rem;
     min-height: 3rem;
+  }
+  textarea {
+    padding: .75rem;
   }
 }
 .center {
