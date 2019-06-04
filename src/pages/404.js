@@ -11,7 +11,7 @@ export default function notFound() {
     <Layout className="full-screen">
       <header className={styles.error}>
         <Banner title="oops it's a dead end">
-          <AniLink to="/" className="button out-white">Back to home page</AniLink>
+          <AniLink fade to="/" className="button out-white">Back to home page</AniLink>
         </Banner>
       </header>
     </Layout>

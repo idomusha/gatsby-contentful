@@ -1,7 +1,6 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import PropTypes from 'prop-types'
 
 import { FaMap } from 'react-icons/fa'
@@ -55,7 +54,7 @@ export default function Project({ project }) {
   return (
     <article className={styles.project}>
       {slug !== null
-        ? <AniLink fade to={`project/${slug}`} className={styles.link}>{inner}</AniLink>
+        ? <Link to={`project/${slug}`} className={styles.link}>{inner}</Link>
         : <>{inner}</>
       }
     </article>

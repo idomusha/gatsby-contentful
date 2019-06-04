@@ -16,7 +16,9 @@ module.exports = {
     siteUrl: `https://www.soot.black`,
     description: `front-end developer`,
     author: `idomusha`,
-    email: `idomusha@soot.black`
+    email: `idomusha@soot.black`,
+    image: '/default.jpg',
+    siteUrl: 'https://sootblack.netlify.com'
   },
   plugins: [
     `gatsby-plugin-playground`,
@@ -58,7 +60,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-
-    `gatsby-plugin-transition-link`,
   ],
 }

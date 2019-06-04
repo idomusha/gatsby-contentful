@@ -1,6 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import Project from '../Portfolio/Project'
 import Title from '../Common/Title'
@@ -41,9 +40,9 @@ export default function Featured() {
         <Project key={node.contentful_id} project={node} />
       ))}
       </div>
-      <AniLink fade to="/portfolio" className="button in-primary">
+      <Link to="/portfolio" className="button in-primary">
         All projects
-      </AniLink>
+      </Link>
     </section>
   )
 }

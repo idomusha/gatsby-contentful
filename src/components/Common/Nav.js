@@ -1,6 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from 'gatsby'
 
 import pages from '../../constants/pages'
 
@@ -14,9 +13,9 @@ export default function Nav(props) {
       (props.type && props.type === 'header' && item.content !== 'home')
       || (!props.type)
         ? (
-          <AniLink fade key={index} to={item.path}>
+          <Link key={index} to={item.path}>
             {item.content}
-          </AniLink>
+          </Link>
         )
         : null
       )}
