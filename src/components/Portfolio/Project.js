@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import AnyLink from "gatsby-plugin-transition-link/AniLink";
 import Image from 'gatsby-image'
 import PropTypes from 'prop-types'
 
@@ -54,7 +55,7 @@ export default function Project({ project }) {
   return (
     <article className={styles.project}>
       {slug !== null
-        ? <Link to={`project/${slug}`} className={styles.link}>{inner}</Link>
+        ? <AnyLink fade to={`project/${slug}`} className={styles.link}>{inner}</AnyLink>
         : <>{inner}</>
       }
     </article>

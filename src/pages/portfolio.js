@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 
+import Head from '../components/Common/Head'
 import Layout from '../containers/Layout';
 import Hero from '../components/Common/Hero';
 import Projects from '../components/Portfolio/Projects'
@@ -9,6 +10,7 @@ export default class portfolio extends Component {
   render() {
     return (
       <Layout>
+        <Head title="Portfolio" />
         <Hero
           page={this.props.pathname}
           image={this.props.data.portfolioBackgroundImage.childImageSharp.fluid}

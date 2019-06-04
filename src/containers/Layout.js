@@ -1,4 +1,5 @@
 import React from 'react'
+// TODO: https://medium.com/free-code-camp/how-to-animate-page-transitions-in-gatsby-js-b36e3ae14c29
 
 import Header from '../components/Common/Header'
 import Footer from '../components/Common/Footer'

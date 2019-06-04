@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import Head from '../components/Common/Head'
 import Layout from '../containers/Layout'
 import Hero from '../components/Common/Hero'
 import Banner from '../components/Common/Banner'
@@ -14,6 +15,7 @@ export default ({ data, location: { pathname }}) => {
   console.log('pathname', pathname)
   return (
     <Layout>
+      <Head title="Home" description="Home description" />
       <Hero page={pathname} image={data.aboutBackgroundImage.childImageSharp.fluid}>
         <Banner
           title="continue exploring"
