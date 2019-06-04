@@ -13,12 +13,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `idomusha`,
-    siteUrl: `https://www.soot.black`,
+    siteUrl: `https://sootblack.netlify.com`,
     description: `front-end developer`,
     author: `idomusha`,
     email: `idomusha@soot.black`,
     image: '/default.jpg',
-    siteUrl: 'https://sootblack.netlify.com'
   },
   plugins: [
     `gatsby-plugin-playground`,
@@ -60,5 +59,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+
+    `gatsby-plugin-react-helmet`,
   ],
 }

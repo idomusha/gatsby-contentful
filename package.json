@@ -4,6 +4,11 @@
   "description": "Porfolio",
   "version": "0.1.0",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "SET GATSBY_GRAPHQL_IDE=playground & gatsby develop",
@@ -16,6 +21,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
+    "eslint-config-airbnb": "^17.1.0",
     "gatsby": "^2.6.0",
     "gatsby-background-image": "^0.7.0",
     "gatsby-image": "^2.1.2",
@@ -34,12 +40,16 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
     "react-highlight-words": "^0.16.0",
     "react-icons": "^3.7.0",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^4.3.0",
     "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^2.3.0",
     "prettier": "^1.17.1"
   },
   "repository": {
