@@ -3,42 +3,64 @@
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
+  <span>&nbsp;&nbsp;&nbsp;</span>
+  <a href="https://www.contentful.com">
+    <img alt="Contentful" src="https://www.contentful.com/developers/_assets/logo.74f883e83b.svg" width="52" />
+  </a>
 </p>
 <h1 align="center">
-  idomusha's portfolio
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gatsby - Contentful
 </h1>
 
-Project started from the hello-world boilerplate: this starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Demo started from the hello-world boilerplate: this starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 _You also may want to check out the vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Open the `gatsby-contentful` project directory**
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
-
+2. **Add the environment config files _.env.development_ with this defined variables:**
     ```sh
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+        CONTENTFUL_SPACE_ID=aa6lmvvj10ja
+        CONTENTFUL_ACCESS_TOKEN=coEg-s-TeNE4MIZnenmUau8zdPNpZZQc5LqeJ9dW6qU
+        GATSBY_GRAPHQL_IDE=playground
+    ```
+    
+3. **Add the environment config files _.env.production_ with this defined variables:**
+    ```sh
+        CONTENTFUL_SPACE_ID=aa6lmvvj10ja
+        CONTENTFUL_ACCESS_TOKEN=coEg-s-TeNE4MIZnenmUau8zdPNpZZQc5LqeJ9dW6qU
     ```
 
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
+4.  **Install dependencies:**
     ```sh
-    cd my-hello-world-starter/
-    gatsby develop
+        npm i
     ```
 
-1.  **Open the source code and start editing!**
+5.  **Start the development server:**
+    ```sh
+        npm start
+    ```
 
-    Your site is now running at `http://localhost:8000`!
+- You can now view the demo. Open up a new tab in your browser and navigate to:
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+  http://localhost:8000/
+⠀
+- View GraphiQL, an in-browser IDE, to explore your site's data and schema:
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+  http://localhost:8000/___graphql
+
+- Your Gatsby GraphQL Playground is running on:
+
+  http://localhost:8000/___playground
+
+_Note that the development build is not optimized._
+_To create a production build, use `npm run build`_
+
+
+
+
 
 ## 🧐 What's inside?
 
@@ -82,6 +104,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
+
+
+
+
 ## 📦 What was added?
 
 1.  **[gatsby-plugin-playground](https://www.gatsbyjs.org/packages/gatsby-plugin-playground/)**: A gatsby plugin to use Prisma Playground
@@ -113,6 +139,10 @@ plus being able to work with multiple stacked background images.
 8. **[gatsby-plugin-transition-link](https://www.gatsbyjs.org/packages/gatsby-plugin-transition-link/)**: A link component for page transitions in gatsby ([Gatsby Plugin Transition Link documentation](https://transitionlink.tylerbarnes.ca/))
 
 9. **[gatsby-source-contentful](https://www.gatsbyjs.org/packages/gatsby-source-contentful/)**: Gatsby source plugin for building websites using the [Contentful CMS](https://www.contentful.com/) as a data source
+
+10. **[gatsby-plugin-react-helmet](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/)**: Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.
+
+11. **[gatsby-plugin-sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/)**: Gatsby plugin that automatically creates a sitemap for your site
 
 
 
