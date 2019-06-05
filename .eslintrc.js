@@ -16,8 +16,7 @@ module.exports = {
     "prettier",
     "react",
   ],
-  rule: {
-    "max-len": ["error", {"code": 100}],
+  rules: {
 
     "prefer-promise-reject-errors": ["off"],
 
